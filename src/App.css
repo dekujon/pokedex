@@ -1,4 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: #51c2d5;
+}
+
+.pokedex {
+  width: 90%;
+  margin: auto;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.pokedex-left {
+  flex-basis: 60%;
+}
+
+.pokelist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.poke-card {
+  height: 150px;
+  width: 170px;
+  background-color: #bbf1fa;
+  border-radius: 1rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border;
+  padding: 0.5rem 0.5rem;
+}
+
+.poke-card:hover {
+  cursor: pointer;
+}
+
+.pokedex-right {
+  padding: 2%;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  height: 30px;
+  width: 60px;
+  margin: 30px 10px;
+  background-color: #bbf1fa;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.pokedex-right img {
+  height: 250px;
+  padding-bottom: 2rem;
+}
+
+.pokedex-right h2 {
+  padding-bottom: 1rem;
+}
+
+.pokeName {
+  font-weight: 600;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* less than 2000px */
+@media (max-width: 2000px) {
+  .poke-card {
+    width: 150px;
+  }
+}
+
+/* less than 1400px */
+@media (max-width: 1400px) {
+  .poke-card {
+    width: 100px;
+  }
+}
+
+/* less than 1000px */
+@media (max-width: 1000px) {
+  .poke-card {
+    width: 84px;
+  }
+  .pokedex-left {
+    flex-basis: 65%;
+  }
+  .pokedex-right {
+    flex-basis: 35%;
+  }
+  .pokedex {
+    width: 95%;
+  }
+}
+
+/* less than 768px */
+@media (max-width: 767.98px) {
+  .poke-card {
+    width: 300px;
+    height: 75px;
+    flex-direction: row;
+  }
+  .pokedex-left {
+    flex-basis: 50%;
+  }
+  .pokedex-right {
+    flex-basis: 50%;
+    position: sticky;
+    align-self: flex-start;
+    top: 20%;
+    left: 6%;
+    overflow-y: auto;
+  }
+}
