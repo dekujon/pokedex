@@ -94,7 +94,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #51c2d5;
 }
+
 
 /* less than 2000px */
 @media (max-width: 2000px) {
@@ -129,7 +133,7 @@ body {
 /* less than 768px */
 @media (max-width: 767.98px) {
   .poke-card {
-    width: 300px;
+    width: 250px;
     height: 75px;
     flex-direction: row;
   }
@@ -142,6 +146,6 @@ body {
     align-self: flex-start;
     top: 20%;
     left: 6%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
   }
 }
